@@ -9,6 +9,8 @@ Self-employed optometrist. Friendly and down-to-earth. LOCSU PEARS, Glaucoma and
 
 ---
 
+<br>
+
 ### WORK HISTORY
 
 *Nov 15 – Present:* ***Locum Optometrist***
@@ -35,6 +37,8 @@ Continued employment following successful registration at the first attempt.
 
 ---
 
+<br>
+
 ### EDUCATION
 
 *Sep 2004 – Jul 2007*: ***University of Manchester***
@@ -57,17 +61,23 @@ Mathematics (A\*), Dual Award Science (A\*), English (A\*), Spanish (A\*)
 
 ---
 
+<br>
+
 ### COMPUTER SKILLS
 
 Fluent touch-typist. Familiar with Socrates and Acuitas software. Hobbyist Python programmer.
 
 ---
 
+<br>
+
 ### INTERESTS
 
 Guitar playing, gym-going, reading widely.
 
 ---
+
+<br>
 
 ### REFERENCES
 
