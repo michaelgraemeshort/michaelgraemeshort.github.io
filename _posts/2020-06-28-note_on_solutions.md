@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Foolish Coding Challenge Solutions
+title: Coding Challenge Solutions
 ---
 
 ...will soon be viewable [here](https://github.com/michaelgraemeshort/challenge-solutions).
