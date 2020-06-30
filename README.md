@@ -1,2 +1,2 @@
 # michaelgraemeshort.github.io
-Blog project.
+Blog project. View at michaelgraemeshort.github.io, obviously.
