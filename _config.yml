@@ -10,3 +10,9 @@ github_username:  michaelgraemeshort
 # Build settings
 # markdown: kramdown (commented this out just to see what happens - nothing, if I understand the docs correctly, as kramdown is default)
 theme: minima
+
+header_pages:
+ - about.md
+ - certs.md
+ - cv.md
+ - links.md
