@@ -53,7 +53,7 @@ Self-employed optometrist. Friendly and down-to-earth. LOCSU PEARS, Glaucoma and
 
 *Sep 97 – Jun 02*: ***John Spence Community High School, North Shields***
 
-- Nine GCSEs including: Mathematics (A\*), Dual Award Science (A\*), English (A\*), Spanish (A\*)
+- Nine GCSEs including Mathematics (A\*), Dual Award Science (A\*), English (A\*), Spanish (A\*)
 
 ---
 
