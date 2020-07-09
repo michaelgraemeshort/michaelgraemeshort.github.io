@@ -48,7 +48,7 @@ Alcon Therapeutics Student of the Year 2007
 
 *Sep 02 – Jun 04*: ***Tynemouth College, North Shields***
 
-A Levels: Mathematics (A), Physics (A), Biology (A)
+A Levels: Mathematics (A), Physics (A), Biology (A)  
 AS Levels: Chemistry (A), Environmental Science (A), General Studies (A)
 
 *Sep 97 – Jun 02*: ***John Spence Community High School, North Shields***
