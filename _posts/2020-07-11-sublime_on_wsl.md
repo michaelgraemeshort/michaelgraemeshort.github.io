@@ -22,7 +22,7 @@ Because nothing is as straightforward as you expect.
 
 1. In Ubuntu, `cd ~` to cd to your home directory
 2. Enter `nano .profile`
-3. Add `alias subl='subl.exe'` at the end
+3. Add `alias subl='subl.exe'` somewhere
 4. Save and exit
 5. Restart Ubuntu
 6. `subl` now launches Sublime.
