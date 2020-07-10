@@ -3,7 +3,9 @@ layout: post
 title: Launching Sublime Text from Ubuntu on Windows Subsystem for Linux
 ---
 
-What I had to do:
+Because nothing is as straightforward as you expect.
+
+**What I had to do:**
 
 1. Download Sublime Text [here](https://www.sublimetext.com/)
 2. Add its installation directory to PATH:
@@ -16,7 +18,7 @@ What I had to do:
 3. Restart Ubuntu
 4. `subl.exe` now launches Sublime.
 
-Optionally, create an alias for `subl.exe`:
+**Optionally, create an alias for `subl.exe`:**
 
 1. In Ubuntu, `cd ~` to cd to your home directory
 2. Enter `nano .profile`
@@ -25,11 +27,11 @@ Optionally, create an alias for `subl.exe`:
 5. Restart Ubuntu
 6. `subl` now launches Sublime.
 
-Notes:
+**Notes:**
 - `cd` on its own also cds to your home directory
-- You don't have to use nano
+- You don't have to use Nano
 - You don't have to put your alias in `.profile', I only put it there because of [this](https://github.com/michaeltreat/Windows-Subsystem-For-Linux-Setup-Guide/blob/master/readmes/04_updating_terminal.md), which is excellent
-- You don't have to use `subl` either. Use whatever you want
+- You don't have to use `subl` either. Call it whatever you want
 - After adding Sublime's installation directory to PATH, `subl` worked for me in Powershell but not Ubuntu, hence the need for an alias.
 
-I may expand this post after I have got to grips with Sublime.
+I may expand this post as I get to grips with Sublime.

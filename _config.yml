@@ -13,6 +13,5 @@ theme: minima
 
 header_pages:
  - about.md
- - certs.md
  - cv.md
  - links.md
