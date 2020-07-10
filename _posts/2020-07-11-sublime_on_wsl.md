@@ -30,8 +30,8 @@ Because nothing is as straightforward as you expect.
 **Notes:**
 - `cd` on its own also cds to your home directory
 - You don't have to use Nano
-- You don't have to put your alias in `.profile', I only put it there because of [this](https://github.com/michaeltreat/Windows-Subsystem-For-Linux-Setup-Guide/blob/master/readmes/04_updating_terminal.md), which is excellent
+- You don't have to put your alias in `.profile`, I only put it there because of [this](https://github.com/michaeltreat/Windows-Subsystem-For-Linux-Setup-Guide/blob/master/readmes/04_updating_terminal.md), which is excellent
 - You don't have to use `subl` either. Call it whatever you want
-- After adding Sublime's installation directory to PATH, `subl` worked for me in Powershell but not Ubuntu, hence the need for an alias.
+- After adding Sublime's installation directory to PATH, `subl` worked for me in PowerShell but not Ubuntu, hence the need for an alias.
 
 I may expand this post as I get to grips with Sublime.
