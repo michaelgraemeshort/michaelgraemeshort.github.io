@@ -3,7 +3,7 @@ layout: page
 title: Certificates
 ---
 
-Yes, they're all from SoloLearn. Great app, by the way. Exceedingly rigorous.
+Yes, they're all from SoloLearn. Great app, by the way.
 
 ![Python 3 Tutorial](SoloLearn/python_3.jpg)
 
