@@ -3,7 +3,7 @@ layout: post
 title: Launching Sublime Text from Ubuntu on Windows Subsystem for Linux
 ---
 
-Because nothing is as straightforward as you expect.
+`subl` not working?
 
 **What I had to do:**
 
