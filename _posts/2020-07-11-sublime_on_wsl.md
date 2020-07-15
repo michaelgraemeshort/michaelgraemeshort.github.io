@@ -7,7 +7,7 @@ title: Launching Sublime Text from Ubuntu on Windows Subsystem for Linux
 
 **What I had to do:**
 
-1. Download Sublime Text [here](https://www.sublimetext.com/)
+1. ([Download Sublime Text](https://www.sublimetext.com/))
 2. Add its installation directory to PATH:
     1. Type `env` into Start Search
     2. Click `Environment Variables...`
