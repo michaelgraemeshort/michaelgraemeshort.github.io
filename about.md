@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-Optometrist. Mid-thirties. Married father of two. Learning to code, as they say.
+Optometrist. Mid-thirties. Married father of two. Learning to code, as they say on Twitter.
 
 ### Optometrist?
 
@@ -11,7 +11,7 @@ Pretentious word for 'optician'.
 
 ### Why Coding?
 
-Grew disillusioned with retail optics, downloaded SoloLearn, got the bug.
+Uncertain long term outlook for retail optics. I mean, look at [this](https://www.selectspecs.com/cheap-glasses/).
 
 ### Disclaimer
 

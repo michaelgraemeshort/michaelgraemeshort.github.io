@@ -5,7 +5,7 @@ title: Curriculum Vitae
 
 ### PROFILE
 
-Self-employed optometrist. Friendly and down-to-earth. LOCSU PEARS, Glaucoma and Paediatrics-accredited.
+Self-employed optometrist. Friendly and down-to-earth. LOCSU PEARS, Glaucoma and Paediatrics-accredited [(click)](https://github.com/michaelgraemeshort/optical).
 
 ---
 

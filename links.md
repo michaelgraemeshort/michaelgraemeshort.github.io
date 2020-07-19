@@ -14,3 +14,4 @@ title: Links
 
 - [Challenge solutions](https://github.com/michaelgraemeshort/challenge_solutions)
 - [Notes etc](https://github.com/michaelgraemeshort/notes_etc)
+- [optical](https://github.com/michaelgraemeshort/optical)
