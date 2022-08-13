@@ -52,13 +52,13 @@ social-network-links:
   email: "michaelgraemeshort@gmail.com"
   # rss: true  # remove this line if you don't want to show an RSS link at the bottom
   # facebook: deanattali
-  github: michaelgraemeshort
+  # github: michaelgraemeshort
   # twitter: daattali
   # patreon: DeanAttali
   # youtube: c/daattali
- medium: @michaelgraemeshort  # might need to fix this
+#  medium: @michaelgraemeshort  # might need to fix this
 #  reddit: yourname
- linkedin: michael-short-37964b1b2/ # and this
+#  linkedin: michael-short-37964b1b2/ # and this
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -75,7 +75,7 @@ social-network-links:
 #  google-scholar: your google scholar
 #  discord: invite/invite_code or users/userid 
 #  kaggle: yourname
- hackerrank: @michaelgraemesh1  # and this
+#  hackerrank: @michaelgraemesh1  # and this
 
 
 # If you want your website to generate an RSS feed, provide a description
@@ -95,7 +95,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "michaelgraemeshort@github.io"
+# url-pretty: "michaelgraemeshort@github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
