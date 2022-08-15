@@ -21,8 +21,8 @@ author: Michael Graeme Short
 
 navbar-links:
   CV: "cv"
-  Links:
-    - Certificates: "https://github.com/michaelgraemeshort/optical"
+  Resources:
+    - Optical: "https://github.com/michaelgraemeshort/optical"
   About: "about"
     # - Learn markdown: "https://www.markdowntutorial.com/"
   # Author's home: "https://deanattali.com" # Change to "CV"
@@ -76,7 +76,7 @@ social-network-links:
 #  google-scholar: your google scholar
 #  discord: invite/invite_code or users/userid 
 #  kaggle: yourname
-  hackerrank: michaelgraemesh1
+  # hackerrank: michaelgraemesh1
 
 
 # If you want your website to generate an RSS feed, provide a description
@@ -99,7 +99,7 @@ share-links-active:
 url-pretty: "michaelgraemeshort@github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 50
+excerpt_length: 0 # maybe change later
 
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: true
@@ -127,17 +127,17 @@ navbar-var-length: false
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
+navbar-col: "#84A9C0"
+navbar-text-col: "#344055"
 navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
 text-col: "#404040"
 link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#EAEAEA"
+hover-col: "#CAD49D"
+footer-col: "#84A9C0"
 footer-text-col: "#777777"
-footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
+footer-link-col: "#344055"
+footer-hover-col: "#CAD49D"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
