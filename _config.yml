@@ -20,11 +20,12 @@ author: Michael Graeme Short
 ###############################################
 
 navbar-links:
-  About Me: "aboutme" # change to "About"
-  Resources:  # Change to "Links"
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com" # Change to "CV"
+  CV: "cv"
+  Links:
+    - Certificates: "https://github.com/michaelgraemeshort/optical"
+  About: "about"
+    # - Learn markdown: "https://www.markdowntutorial.com/"
+  # Author's home: "https://deanattali.com" # Change to "CV"
 
 ################
 # --- Logo --- #
@@ -32,7 +33,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+avatar: "assets/img/PXL_20220815_195732628.PORTRAIT.jpg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -56,9 +57,9 @@ social-network-links:
   # twitter: daattali
   # patreon: DeanAttali
   # youtube: c/daattali
-  medium: michaelgraemeshort  # might need to fix this
+  medium: michaelgraemeshort
 #  reddit: yourname
-  linkedin: michael-short-37964b1b2/ # and this
+  linkedin: michael-short-37964b1b2/
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -75,7 +76,7 @@ social-network-links:
 #  google-scholar: your google scholar
 #  discord: invite/invite_code or users/userid 
 #  kaggle: yourname
-  hackerrank: michaelgraemesh1  # and this
+  hackerrank: michaelgraemesh1
 
 
 # If you want your website to generate an RSS feed, provide a description
