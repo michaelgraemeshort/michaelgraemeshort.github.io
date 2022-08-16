@@ -3,11 +3,6 @@ layout: post
 title: unittest Basics
 ---
 
-**Resources**
-- [Real Python: Getting Started with Testing in Python](https://realpython.com/python-testing/)
-- [Real Python: Effective Python Testing with Pytest](https://realpython.com/pytest-python-testing/)
-- [Official Unittest Documentation](https://docs.python.org/3/library/unittest.html)
-
 **Very Quick Reference**
 
 1. Name file `test_<whatever>.py` so it can be detected by `unittest`. In the file:
@@ -41,10 +36,12 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-(Modified from [here](https://github.com/michaelgraemeshort/py_bootcamp/blob/master/cards_exercise_tests.py).)
-
 **Notes**
 
 - Just use `pytest`
 - `setUp` and `tearDown` methods can be used to define instructions to be executed before and after each test
 - The `-m` flag in `python3 -m <etc>` runs the module specified thereafter (`unittest`, in this case) as a script
+
+**Resources**
+- [Real Python: Getting Started with Testing in Python](https://realpython.com/python-testing/)
+- [Official Unittest Documentation](https://docs.python.org/3/library/unittest.html)

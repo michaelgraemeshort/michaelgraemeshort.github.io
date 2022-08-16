@@ -100,7 +100,7 @@ share-links-active:
 url-pretty: "michaelgraemeshort@github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 0 # maybe change later
+excerpt_length: 50 # maybe change later
 
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: true
