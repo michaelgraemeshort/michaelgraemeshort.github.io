@@ -21,8 +21,9 @@ author: Michael Graeme Short
 
 navbar-links:
   CV: "cv"
-  Resources:
-    - Optical: "https://github.com/michaelgraemeshort/optical"
+  Certificates: "https://github.com/michaelgraemeshort/optical"
+  # Resources:
+  #   - Optical: "https://github.com/michaelgraemeshort/optical"
   About: "about"
     # - Learn markdown: "https://www.markdowntutorial.com/"
   # Author's home: "https://deanattali.com" # Change to "CV"
@@ -133,11 +134,11 @@ navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
 text-col: "#404040"
 link-col: "#008AFF"
-hover-col: "#9E788F"
+hover-col: "#CAD49D"
 footer-col: "#84A9C0"
 footer-text-col: "#777777"
 footer-link-col: "#344055"
-footer-hover-col: "#9E788F"
+footer-hover-col: "#CAD49D"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
