@@ -19,11 +19,11 @@ add = double(add)
 ```
 behind the scenes.
 
-**Decorator Design**
+**Building a decorator**
 
-But how to define `double` so that it doubles the output of `add`?
+Let's create `double` so that it doubles the output of `add`.
 
-Because `add` invokes `double(add)`, `add(2, 3)` invokes `double(add)(2, 3)`. Note the two sets of parentheses. For this to work, `double(add)` must return a function (or other callable) to receive the arguments in the second set of parentheses.
+`add` invokes `double(add)`, so `add(2, 3)` invokes `double(add)(2, 3)`. Note the two sets of parentheses. For this to work, `double(add)` must return a function (or other callable) that can receive the arguments in the second set of parentheses.
 
 If that made sense, proceed to "That Made Sense" below.
 
@@ -36,16 +36,16 @@ def add(x):
     return inner
 ```
 
-This `add` is a function that takes one argument and returns a function that takes another. The inner function returns the sum of both arguments.
+This new `add` is a function that returns a function, rather than a number or whatever else. It is the nested function `inner` that returns the sum of x and y.
 
 You could pass an argument to `inner` like this:
 
 ```python
->>> add(2)(3)   # add(2) returns inner. inner(3) returns 2 + 3
+>>> add(2)(3)
 5
 ```
 
-Or this:
+`add(2)` returns `inner`, and `inner(3)` returns 5. Or you could do this:
 
 ```python
 >>> why = add("why ")
@@ -64,7 +64,7 @@ def double(fn):
     return inner
 ```
 
-What about `inner`? It must receive the arguments ostensibly passed to `add` and return double their sum.
+What about `inner`? It must receive the arguments ostensibly passed to `add` (2 and 3, in this case) and return double their sum.
 
 ```python
 def double(fn):
@@ -73,7 +73,7 @@ def double(fn):
     return inner
 ```
 
-Now `double(add)` returns `inner`, and `inner(2, 3)` returns `(2 + 3) * 2`. This decorator works.
+Now `double(add)` returns `inner`, and `inner(2, 3)` returns `(2 + 3) * 2`.
 
 Decorators can also take arguments. You could make a more flexible function called `multiply`, to be used like this:
 
@@ -85,11 +85,11 @@ def add(x, y):
 
 Now, `add(2, 3)` invokes `multiply(2)(add)(2, 3)`. That's three sets of parentheses, so you're going to need three functions nested within each other.
 
-- `multiply` must take one argument (the multiplier) and return a function
-- That function must take one argument (the function `add` in this case) and return another function
-- That function must take the arguments (2 and 3) passed to `add` and return their sum, multiplied (in this case, by 2)
+- `multiply` must take one argument (the multiplier) and return a function.
+- That function must take one argument (the function `add` in this case) and return yet another function.
+- That function must take the arguments (2 and 3) passed to `add` and return their sum, multiplied (in this case, by 2).
 
-We can therefore define `multiply` as follows:
+We can therefore build `multiply` as follows:
 
 ```python
 def multiply(multiplier):
@@ -100,11 +100,11 @@ def multiply(multiplier):
     return middle
 ```
 
-**Miscellanea:**
+**More fun stuff**
 
-- The innermost function is commonly called `wrapper`, as it "wraps" or extends the decorated function
-- You can make `wrapper` accept any number of positional and keyword arguments using the `*` and `**` operators, to make it more versatile
-- You can decorate your wrapper with `@functools.wraps` to make it return the docstring of the wrapped function, rather than that of the wrapper, when (for example) `add.__doc__` or `help(add)` is called
+- The innermost function is commonly called `wrapper`, as it "wraps" or extends the decorated function.
+- `wrapper` can be made to accept any number of positional and keyword arguments by the use of the `*` and `**` operators. Then one decorator can be used to wrap different functions.
+- You can decorate your wrapper with `@functools.wraps` to make it return the docstring of the wrapped function, rather than its own, when `add.__doc__` or `help(add)` is called.
 
 Applying the above:
 
@@ -120,4 +120,3 @@ def multiply(multiplier):
         return wrapper
     return middle
 ```
-
