@@ -1,10 +1,16 @@
 ---
 layout: post
-title: Decorators in Python
-subtitle: A different perspective
+title: Building Decorators in Python
+subtitle: Nested functions ahoy
 ---
 
-A decorator looks like this:
+Decorators. Weird, right? Why do I need nested functions? How many nested functions do I need? How do I know which parameters to assign to each?
+
+It's easy. There are two things to understand.
+
+**The First Thing**
+
+A decorator is just syntactic sugar. This
 
 ```python
 @double
@@ -12,101 +18,73 @@ def add(x, y):
     return x + y
 ```
 
-`@double` is the decorator. It modifies the output of the function it decorates. It does this by executing
+executes this behind the scenes:
 
 ```python
 add = double(add)
 ```
-behind the scenes.
 
-**Building a decorator**
+Now, `add` invokes `double(add)`.
 
-Let's create `double` so that it doubles the output of `add`.
+Likewise, `add(3, 4)` invokes `double(add)(3, 4)`.
 
-`add` invokes `double(add)`, so `add(2, 3)` invokes `double(add)(2, 3)`. Note the two sets of parentheses. For this to work, `double(add)` must return a function (or other callable) that can receive the arguments in the second set of parentheses.
+Note: that's two sets of parentheses. Which leads us to:
 
-If that made sense, proceed to "That Made Sense" below.
+**The Second Thing**
 
-Otherwise, consider:
+Two sets of parentheses means two functions - an outer, and an inner.
 
-```python
-def add(x):
-    def inner(y):
-        return x + y
-    return inner
-```
-
-This new `add` is a function that returns a function, rather than a number or whatever else. It is the nested function `inner` that returns the sum of x and y.
-
-You could pass an argument to `inner` like this:
+And three sets of parentheses means three functions - an outer, a middle, and an inner. For example, in:
 
 ```python
->>> add(2)(3)
-5
-```
-
-`add(2)` returns `inner`, and `inner(3)` returns 5. Or you could do this:
-
-```python
->>> why = add("why ")
->>> why("is this my life")
-'why is this my life'
-```
-
-**That Made Sense**
-
-Returning to `double(add)(2, 3)` (and our original definition of `add`), you can see that `double` must take one argument (the function `add`, in this case) and return another function.
-
-```python
-def double(fn):
-    def inner():
-        pass
-    return inner
-```
-
-What about `inner`? It must receive the arguments ostensibly passed to `add` (2 and 3, in this case) and return double their sum.
-
-```python
-def double(fn):
-    def inner(x, y):
-        return (x + y) * 2
-    return inner
-```
-
-Now `double(add)` returns `inner`, and `inner(2, 3)` returns `(2 + 3) * 2`.
-
-Decorators can also take arguments. You could make a more flexible function called `multiply`, to be used like this:
-
-```python
-@multiply(2)
+@multiply(2)        # Fancy decorator with an argument
 def add(x, y):
     return x + y
 ``` 
 
-Now, `add(2, 3)` invokes `multiply(2)(add)(2, 3)`. That's three sets of parentheses, so you're going to need three functions nested within each other.
+`add(3, 4)` invokes `multiply(2)(add)(3, 4)`. Keep this in mind for the next section.
 
-- `multiply` must take one argument (the multiplier) and return a function.
-- That function must take one argument (the function `add` in this case) and return yet another function.
-- That function must take the arguments (2 and 3) passed to `add` and return their sum, multiplied (in this case, by 2).
+**Building a Decorator**
 
-We can therefore build `multiply` as follows:
+Now, we can begin to define `multiply`.
+
+1. `multiply` takes one argument (the multiplier, `2` in this example) and returns a function.
+
+```python
+def multiply(multiplier):
+    def middle():
+        pass
+    return middle
+```
+
+2. `middle` takes one argument (the function `add`) and returns another function.
+
+```python
+def multiply(multiplier):
+    def middle(fn):
+        def inner():
+            pass
+        return inner
+    return middle
+```
+3. The inner function takes two arguments (`3` and `4`, in this example) and returns whatever you want it to return. You now have all four arguments to play with.
 
 ```python
 def multiply(multiplier):
     def middle(fn):
         def inner(x, y):
-            return (x + y) * multiplier
+            return fn(x, y) * multiplier
         return inner
     return middle
 ```
 
-**More fun stuff**
+**To Recap:**
 
-- The innermost function is commonly called `wrapper`, as it "wraps" or extends the decorated function.
-- `wrapper` can be made to accept any number of positional and keyword arguments by the use of the `*` and `**` operators. Then one decorator can be used to wrap different functions.
-- You can decorate your wrapper with `@functools.wraps` to make it return the docstring of the wrapped function, rather than its own, when `add.__doc__` or `help(add)` is called.
+Just ask yourself what will actually be invoked when you call the decorated function. Each new set of parentheses means another nested function, and their contents indicate which parameters go where.
 
-Applying the above:
+**A layer of polish**
+
+The same decorator, polished:
 
 ```python
 from functools import wraps
@@ -120,3 +98,11 @@ def multiply(multiplier):
         return wrapper
     return middle
 ```
+
+- `inner` is now called `wrapper`. This is a common Python idiom. It "wraps" `fn`.
+- `wrapper` can now accept any number of positional and keyword arguments. `multiply` can therefore be used to decorate other functions with other parameters.
+- `wrapper` has been decorated with `functools.wraps` and the name of the wrapped function. Without this, if you call `help` or `__doc__` on the wrapped function, you will get the docstring of the wrapper instead.
+
+Questions? Errors? Let me know.
+
+Until next time.
