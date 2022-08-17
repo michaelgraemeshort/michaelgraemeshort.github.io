@@ -48,7 +48,7 @@ def add(x, y):
 
 Now, we can begin to define `multiply`.
 
-1. `multiply` takes one argument (the multiplier, `2` in this example) and returns a function.
+`multiply` takes one argument (the multiplier, `2` in this example) and returns a function.
 
 ```python
 def multiply(multiplier):
@@ -57,7 +57,7 @@ def multiply(multiplier):
     return middle
 ```
 
-2. `middle` takes one argument (the function `add`) and returns another function.
+`middle` takes one argument (the function `add`) and returns another function.
 
 ```python
 def multiply(multiplier):
@@ -67,7 +67,7 @@ def multiply(multiplier):
         return inner
     return middle
 ```
-3. The inner function takes two arguments (`3` and `4`, in this example) and returns whatever you want it to return. You now have all four arguments to play with.
+The inner function takes two arguments (`3` and `4`, in this example) and returns whatever you want it to return. You now have all four arguments to play with.
 
 ```python
 def multiply(multiplier):
