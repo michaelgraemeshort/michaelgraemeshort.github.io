@@ -34,7 +34,7 @@ Note: that's two sets of parentheses. Which leads us to:
 
 Two sets of parentheses means two functions - an outer, and an inner.
 
-And three sets of parentheses means three functions - an outer, a middle, and an inner. For example, in:
+Accordingly, three sets of parentheses means three functions - an outer, a middle, and an inner. For example, in:
 
 ```python
 @multiply(2)        # Fancy decorator with an argument
@@ -99,7 +99,8 @@ def multiply(multiplier):
         return wrapper
     return middle
 ```
-<br>
+
+Note:
 - `inner` is now called `wrapper`. This is a common Python idiom. It "wraps" `fn`.
 - `wrapper` can now accept any number of positional and keyword arguments. `multiply` can therefore be used to decorate other functions with other parameters.
 - `wrapper` has been decorated with `functools.wraps` and the name of the wrapped function. Without this, if you call `help` or `__doc__` on the wrapped function, you will get the docstring of the wrapper instead.
