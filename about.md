@@ -10,4 +10,4 @@ On the side, I learn about computer science and software development. I am also 
 
 In my free time I enjoy going working out, playing guitar and reading conspiracy literature.
 
-Blog posts here are entirely for my own benefit. Read at your own risk.
+Blog posts here are entirely for my own benefit. Read at your own peril.
