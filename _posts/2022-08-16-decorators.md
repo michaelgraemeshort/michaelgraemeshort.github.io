@@ -105,7 +105,7 @@ Note:
 - `wrapper` can now accept any number of positional and keyword arguments, by using the `*` and `**` operators. `multiply` can therefore be used to decorate other functions with other parameters.
 - `wrapper` has been decorated with `functools.wraps` and the name of the wrapped function. Without this, if you call `help` or `__doc__` on the wrapped function, you will get the docstring of the wrapper instead.
 
-**Stacking Decorators**
+**Addendum: Stacking Decorators**
 
 **Q.** What does `add` invoke this time?
 
