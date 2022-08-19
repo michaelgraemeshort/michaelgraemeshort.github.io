@@ -32,12 +32,12 @@ Note: that's two sets of parentheses. Which leads us to:
 
 **The Second Thing**
 
-Two sets of parentheses means two functions - an outer, and an inner. `double(add)` must return a object that can be called with `(3, 4)`.
+Two sets of parentheses means two functions - an outer function, and an inner (or *nested*) function. `double(add)` must return a object that can be called with `(3, 4)`.
 
-Accordingly, three sets of parentheses means three functions. For example, in:
+Similarly, three sets of parentheses means three functions - an outer function, a nested function, and a nested function *within* the nested function. For example, in:
 
 ```python
-@multiply(2)        # Fancy decorator with an argument
+@multiply(2)        # Fancy decorator with an argument oooOOOooo
 def add(x, y):
     return x + y
 ``` 
@@ -48,7 +48,7 @@ def add(x, y):
 
 Now, we can begin to define `multiply`.
 
-`multiply` takes one argument (the multiplier, `2` in this example) and returns a function.
+`multiply` takes one argument (the multiplier, `2` in this example) and returns a function, which I'll call `middle`.
 
 ```python
 def multiply(multiplier):
@@ -57,23 +57,23 @@ def multiply(multiplier):
     return middle
 ```
 
-`middle` takes one argument (the function `add`) and returns another function.
+`middle` takes one argument (the function `add`) and returns another function, which I'll call `wrapper` (just go with it, it's a common idiom).
 
 ```python
 def multiply(multiplier):
     def middle(fn):
-        def inner():
+        def wrapper():
             pass
         return inner
     return middle
 ```
 
-The inner function takes two arguments (`3` and `4`, in this example) and returns whatever you want it to return. Now, you have all four arguments to play with.
+`wrapper` takes two arguments (`3` and `4`, in this example) and returns whatever you make it return. Now, you have all four arguments to play with.
 
 ```python
 def multiply(multiplier):
     def middle(fn):
-        def inner(x, y):
+        def wrapper(x, y):
             return fn(x, y) * multiplier
         return inner
     return middle
@@ -101,7 +101,6 @@ def multiply(multiplier):
 ```
 
 Note:
-- `inner` is now called `wrapper`. This is a common Python idiom.
 - `wrapper` can now accept any number of positional and keyword arguments, by using the `*` and `**` operators. `multiply` can therefore be used to decorate other functions with other parameters.
 - `wrapper` has been decorated with `functools.wraps` and the name of the wrapped function. Without this, if you call `help` or `__doc__` on the wrapped function, you will get the docstring of the wrapper instead.
 
