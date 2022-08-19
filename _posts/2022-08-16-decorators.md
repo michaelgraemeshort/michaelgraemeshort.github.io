@@ -32,9 +32,9 @@ Note: that's two sets of parentheses. Which leads us to:
 
 **The Second Thing**
 
-Two sets of parentheses means two functions - an outer, and an inner.
+Two sets of parentheses means two functions - an outer, and an inner. `double(add)` must return a object that can be called with `(3, 4)`.
 
-Accordingly, three sets of parentheses means three functions - an outer, a middle, and an inner. For example, in:
+Accordingly, three sets of parentheses means three functions. For example, in:
 
 ```python
 @multiply(2)        # Fancy decorator with an argument
@@ -83,7 +83,7 @@ def multiply(multiplier):
 
 Just ask yourself what will actually be invoked when you call the decorated function. Each new set of parentheses means another nested function, and their contents indicate which parameters go where.
 
-**A layer of polish**
+**A Layer of Pythonic Polish**
 
 The same decorator, polished:
 
@@ -101,10 +101,27 @@ def multiply(multiplier):
 ```
 
 Note:
-- `inner` is now called `wrapper`. This is a common Python idiom. It "wraps" `fn`.
-- `wrapper` can now accept any number of positional and keyword arguments. `multiply` can therefore be used to decorate other functions with other parameters.
+- `inner` is now called `wrapper`. This is a common Python idiom.
+- `wrapper` can now accept any number of positional and keyword arguments, by using the `*` and `**` operators. `multiply` can therefore be used to decorate other functions with other parameters.
 - `wrapper` has been decorated with `functools.wraps` and the name of the wrapped function. Without this, if you call `help` or `__doc__` on the wrapped function, you will get the docstring of the wrapper instead.
 
-Questions? Errors? Let me know.
+**Stacking Decorators**
 
-Until next time.
+Q. What does `add` invoke this time?
+
+```python
+@multiply(2)
+@multiply(3)
+def add(x, y):
+    return x + y
+```
+
+A. `add = multiply(2)(multiply(3)(add))`
+
+So `add(3, 4)` invokes `multiply(2)(multiply(3)(add))(3, 4)`.
+
+Ponder this if you enjoy pain and misery. Otherwise, don't worry about it. You can do it, and it works as expected.
+
+---
+
+That's all for this post. Questions? Errors? Got a better name for `middle`? Let me know.
