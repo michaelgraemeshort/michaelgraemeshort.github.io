@@ -32,12 +32,12 @@ Note: that's two sets of parentheses. Which leads us to:
 
 **The Second Thing**
 
-Two sets of parentheses means two functions - an outer function, and an inner (or *nested*) function. `double(add)` must return a object that can be called with `(3, 4)`.
+Two sets of parentheses means two functions - an outer function, and an inner (or nested) function. `double(add)` must return a object that can be called with `(3, 4)`.
 
-Similarly, three sets of parentheses means three functions - an outer function, a nested function, and a nested function *within* the nested function. For example, in:
+Similarly, three sets of parentheses means three functions - an outer function, a nested function, and a nested function in the nested function. For example, in:
 
 ```python
-@multiply(2)        # Fancy decorator with an argument oooOOOooo
+@multiply(2)        # Fancy decorator with an argument oooohh
 def add(x, y):
     return x + y
 ``` 
@@ -57,7 +57,7 @@ def multiply(multiplier):
     return middle
 ```
 
-`middle` takes one argument (the function `add`) and returns another function, which I'll call `wrapper` (just go with it, it's a common idiom).
+`middle` takes one argument (the function `add`) and returns another function, which I'll call `wrapper` (just go with it).
 
 ```python
 def multiply(multiplier):
