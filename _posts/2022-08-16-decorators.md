@@ -68,7 +68,7 @@ def multiply(multiplier):
     return middle
 ```
 
-The inner function takes two arguments (`3` and `4`, in this example) and returns whatever you want it to return. You now have all four arguments to play with.
+The inner function takes two arguments (`3` and `4`, in this example) and returns whatever you want it to return. Now, you have all four arguments to play with.
 
 ```python
 def multiply(multiplier):
@@ -107,7 +107,7 @@ Note:
 
 **Stacking Decorators**
 
-Q. What does `add` invoke this time?
+**Q.** What does `add` invoke this time?
 
 ```python
 @multiply(2)
@@ -116,11 +116,11 @@ def add(x, y):
     return x + y
 ```
 
-A. `add = multiply(2)(multiply(3)(add))`
+**A.** `add = multiply(2)(multiply(3)(add))`
 
 So `add(3, 4)` invokes `multiply(2)(multiply(3)(add))(3, 4)`.
 
-Ponder this if you enjoy pain and misery. Otherwise, don't worry about it. You can do it, and it works as expected.
+Ponder this if you enjoy pain and misery. Otherwise, don't worry about it. It works as it should.
 
 ---
 
