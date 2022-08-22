@@ -4,7 +4,7 @@ title: Building Decorators in Python
 subtitle: Nested functions ahoy
 ---
 
-Decorators. Weird, right? Why do I need nested functions? How many nested functions do I need? How do I know which parameters to assign to each?
+Decorators. Complicated, right? Why do I need nested functions? How many nested functions do I need? How do I know which parameters to assign to each?
 
 It's easy. There are two things to understand.
 
@@ -32,12 +32,12 @@ Note: that's two sets of parentheses. Which leads us to:
 
 **The Second Thing**
 
-Two sets of parentheses means two functions - an outer function, and an inner (or nested) function. `double(add)` must return a object that can be called with `(3, 4)`.
+Two sets of parentheses means two functions - an outer function, and an inner (or nested) function. This point is crucial: `double(add)` must return a object that can be called with `(3, 4)`. 
 
 Similarly, three sets of parentheses means three functions - an outer function, a nested function, and a nested function in the nested function. For example, in:
 
 ```python
-@multiply(2)        # Fancy decorator with an argument oooohh
+@multiply(2)        # Fancy decorator with an argument 
 def add(x, y):
     return x + y
 ``` 
@@ -102,7 +102,7 @@ def multiply(multiplier):
 
 Note:
 - `wrapper` can now accept any number of positional and keyword arguments, by using the `*` and `**` operators. `multiply` can therefore be used to decorate other functions with other parameters.
-- `wrapper` has been decorated with `functools.wraps` and the name of the wrapped function. Without this, if you call `help` or `__doc__` on the wrapped function, you will get the docstring of the wrapper instead.
+- `wrapper` has been decorated with `functools.wraps` and the name of the wrapped function. Without this, if you query the metadata of the wrapped function (for example, with `help` or `__name__`), you will get the metadata of the wrapper instead.
 
 **Addendum: Stacking Decorators**
 
