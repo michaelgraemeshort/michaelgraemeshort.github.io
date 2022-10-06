@@ -4,7 +4,7 @@ title: Building Decorators in Python
 subtitle: Nested functions ahoy
 ---
 
-Decorators. Complicated, right? Why do I need nested functions? How many nested functions do I need? How do I know which parameters to assign to each?
+Decorators. Confusing, right? Why do I need nested functions? How many nested functions do I need? How do I know which parameters go where?
 
 It's easy. There are two things to understand.
 
@@ -46,7 +46,7 @@ def add(x, y):
 
 **Building a Decorator**
 
-Now, we can begin to define `multiply`.
+Now, we are going to define `multiply`.
 
 `multiply` takes one argument (the multiplier, `2` in this example) and returns a function, which I'll call `middle`.
 
