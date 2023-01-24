@@ -64,7 +64,7 @@ def multiply(multiplier):
     def middle(fn):
         def wrapper():
             pass
-        return inner
+        return wrapper
     return middle
 ```
 
@@ -75,7 +75,7 @@ def multiply(multiplier):
     def middle(fn):
         def wrapper(x, y):
             return fn(x, y) * multiplier
-        return inner
+        return wrapper
     return middle
 ```
 
