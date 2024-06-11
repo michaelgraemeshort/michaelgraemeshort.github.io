@@ -4,9 +4,9 @@ title: About
 subtitle: Entertaining subtitle
 ---
 
-My name is Michael Graeme Short and I am a locum optometrist and married father-of-two.
+My name is Michael Graeme Short and I am a locum optometrist and married father-of-three.
 
-On the side, I learn about computer science and software development. I am also a [CMP](https://collegeofmediaandpublishing.co.uk/)-accredited proofreader and editor (out of practice, but open to offers).
+On the side, I learn about computer science and software development. I am also a [CMP](https://collegeofmediaandpublishing.co.uk/)-accredited proofreader and editor.
 
 In my free time I enjoy staying fit, playing guitar and reading widely.
 
